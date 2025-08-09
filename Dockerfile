@@ -15,6 +15,6 @@ COPY . .
 ENV PYTHONUNBUFFERED=1
 ENV DATABASE_URL=${DATABASE_URL}
 
-EXPOSE 8000
+EXPOSE 9001
 
 CMD ["sh", "-c", "uvicorn src.main:app --host 0.0.0.0 --port ${PORT}"]
