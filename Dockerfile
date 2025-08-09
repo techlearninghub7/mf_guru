@@ -15,5 +15,5 @@ ENV DATABASE_URL=${DATABASE_URL}
 # Expose port
 EXPOSE 8000
 
-# Start FastAPI with uvicorn
-CMD ["sh", "-c", "uvicorn src.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+# Run using Python so we can read PORT env var
+CMD ["python", "-m", "src.main"]
